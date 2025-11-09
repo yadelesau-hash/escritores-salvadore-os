@@ -1,0 +1,152 @@
+:root{
+  --bg: #0f1724;        /* fondo general */
+  --card: #0b1220;      /* tarjetas */
+  --accent: #ff6b6b;    /* color principal */
+  --muted: #94a3b8;     /* texto secundario */
+  --glass: rgba(255,255,255,0.04);
+}
+
+body{
+  background: linear-gradient(180deg,#071127 0%, var(--bg) 60%);
+  color: #e6eef8;
+  margin: 0;
+  font-family: 'Poppins', system-ui, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Encabezado */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 40px;
+  gap:16px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(6px);
+  z-index:10;
+}
+
+/* Título */
+header h1{
+  margin:0;
+  font-weight:800;
+  letter-spacing:0.6px;
+  color: #ffffff;
+}
+
+/* Navegación */
+nav a{
+  margin-left:18px;
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:10px;
+  transition: all .18s ease;
+  font-weight:600;
+}
+nav a:hover{ color:#fff; transform:translateY(-2px); background:var(--glass); }
+nav a.active{ background: linear-gradient(90deg, rgba(255,107,107,0.12), rgba(255,107,107,0.06)); color:var(--accent); box-shadow: 0 6px 18px rgba(255,107,107,0.06); }
+
+/* Hero / Inicio */
+.hero{
+  padding:56px 24px;
+  text-align:center;
+  margin-bottom:14px;
+}
+.hero h2{ font-size:28px; margin:0 0 8px; color:#fff; }
+.hero p{ color:var(--muted); max-width:760px; margin:0 auto; }
+
+/* Botones */
+.acciones{ margin-top:18px; display:flex; gap:12px; justify-content:center; }
+.btn{
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color:#eaf4ff;
+  cursor:pointer;
+  font-weight:700;
+  transition:transform .14s ease, box-shadow .14s ease;
+}
+.btn:hover{ transform:translateY(-4px); box-shadow:0 10px 30px rgba(2,6,23,0.6); }
+.btn.secundario{
+  background: linear-gradient(90deg,#ffffff0a, rgba(255,107,107,0.06));
+  color:var(--accent);
+  border: 1px solid rgba(255,107,107,0.12);
+}
+
+/* Contenedor principal con márgenes */
+.contenedor{
+  max-width:1100px;
+  margin:28px auto 48px; /* más margen superior e inferior */
+  padding:0 20px;
+}
+
+/* Grid de tarjetas con espacio más amplio y padding interno */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:18px;
+}
+
+/* Tarjeta */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:18px;
+  border-radius:14px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.55);
+  border: 1px solid rgba(255,255,255,0.03);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.7);
+}
+.card h4{ margin:6px 0 0; color:#fff; }
+.card p{ margin:0; color:var(--muted); }
+
+/* Imagen en tarjeta: más espacio y borde */
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Sección de contacto con márgenes y padding */
+.contacto{
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  margin:30px 0 60px;
+  padding:20px;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:18px;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,0.02);
+}
+
+/* Responsive: aumentar márgenes en móvil */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr); gap:16px}
+  header{padding:20px}
+}
+@media (max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .contenedor{margin:18px 14px 36px}
+  .hero{padding:36px 12px}
+
+  

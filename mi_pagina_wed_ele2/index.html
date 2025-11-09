@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+2
+
+<title>Galería de Arte</title>
+<!-- Fuente y hoja de estilos -->
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800
+&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<!-- ENCABEZADO -->
+<header>
+<h1> Galería de Arte</h1>
+<nav>
+<a class="active" href="#inicio">Inicio</a>
+<a href="#galeria">Obras</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+<!-- INICIO -->
+<section id="inicio" class="hero">
+<h2>Bienvenidos al mundo del arte</h2>
+<p>Explora las obras más famosas y deja que el arte despierte tu
+imaginación.</p>
+<div class="acciones">
+<button id="btnMensaje" class="btn">Ver mensaje</button>
+<button id="btnTema" class="btn secundario"> Tema
+claro/oscuro</button>
+</div>
+</section>
+<!-- GALERÍA -->
+<main id="galeria" class="contenedor">
+<h3> Obras Famosas</h3>
+<div class="grid">
+<article class="card">
+<img src="noche.jpg" alt="La Noche Estrellada" />
+<h4>La Noche Estrellada</h4>
+<p>Vincent van Gogh · 1889</p>
+</article>
+<article class="card">
+
+3
+
+<img src="R.jpeg" alt="Mona Lisa" />
+<h4>Mona Lisa</h4>
+<p>Leonardo da Vinci · 1503–1506</p>
+</article>
+<article class="card">
+<img src="cena.jpeg" alt="La Última Cena" />
+<h4>La Última Cena</h4>
+<p>Leonardo da Vinci · 1495–1498</p>
+</article>
+</div>
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+<h3> Contáctanos</h3>
+<p><strong>Teléfono:</strong> +503 2222-3333</p>
+<p><strong>Dirección:</strong> Calle Cultura #45, San Salvador</p>
+<p><strong>Correo:</strong> info@galeriadearte.com</p>
+</section>
+</main>
+<!-- PIE -->
+<footer>© 2025 · Proyecto Educativo de Arte</footer>
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Galería de Arte</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #ff6b6b;
+  --muted: #94a3b8;
+  --glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}body{font-family:Poppins,system-ui,Arial;margin:0;background:linear-gradient(180deg,#071127 0%, var(--bg) 60%);color:#e6eef8;-webkit-font-smoothing:antialiased}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 40px;gap:16px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.04);position:sticky;top:0;backdrop-filter:blur(6px);z-index:10}
+header h1{margin:0;font-weight:800;letter-spacing:0.6px;color:#fff}
+nav a{margin-left:18px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;transition:all .18s ease;font-weight:600}
+nav a:hover{color:#fff;transform:translateY(-2px);background:var(--glass)}
+nav a.active{background:linear-gradient(90deg, rgba(255,107,107,0.12), rgba(255,107,107,0.06));color:var(--accent);box-shadow:0 6px 18px rgba(255,107,107,0.06)}
+.hero{padding:56px 24px;text-align:center;margin-bottom:14px}
+.hero h2{font-size:28px;margin:0 0 8px;color:#fff}
+.hero p{color:var(--muted);max-width:760px;margin:0 auto}
+.acciones{margin-top:18px;display:flex;gap:12px;justify-content:center}
+.btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:#eaf4ff;cursor:pointer;font-weight:700;transition:transform .14s ease, box-shadow .14s ease}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.btn.secundario{background:linear-gradient(90deg,#ffffff0a, rgba(255,107,107,0.06));color:var(--accent);border:1px solid rgba(255,107,107,0.12)}
+.contenedor{max-width:1100px;margin:28px auto 48px;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.55);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:10px;transition:transform .18s ease, box-shadow .18s ease}
+.card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 20px 40px rgba(2,6,23,0.7)}
+.card h4{margin:6px 0 0;color:#fff}
+.card p{margin:0;color:var(--muted)}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.contacto{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));margin:30px 0 60px;padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+footer{text-align:center;padding:18px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr);gap:16px}header{padding:20px}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}.contenedor{margin:18px 14px 36px}.hero{padding:36px 12px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Galería de Arte</h1>
+  <nav>
+    <a class="active" href="#inicio">Inicio</a>
+    <a href="#galeria">Obras</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h2>Bienvenidos al mundo del arte</h2>
+  <p>Explora las obras más famosas y deja que el arte despierte tu imaginación.</p>
+  <div class="acciones">
+    <button id="btnMensaje" class="btn">Ver mensaje</button>
+    <button id="btnTema" class="btn secundario">Tema claro/oscuro</button>
+  </div>
+</section>
+
+<main id="galeria" class="contenedor">
+  <h3>Obras Famosas</h3>
+  <div class="grid">
+    <article class="card">
+      <img src="noche.jpg" alt="La Noche Estrellada" />
+      <h4>La Noche Estrellada</h4>
+      <p>Vincent van Gogh · 1889</p>
+    </article>
+    <article class="card">
+      <img src="R.jpeg" alt="Mona Lisa" />
+      <h4>Mona Lisa</h4>
+      <p>Leonardo da Vinci · 1503–1506</p>
+    </article>
+    <article class="card">
+      <img src="cena.jpeg" alt="La Última Cena" />
+      <h4>La Última Cena</h4>
+      <p>Leonardo da Vinci · 1495–1498</p>
+    </article>
+  </div>
+
+  <section id="contacto" class="contacto">
+    <h3>Contáctanos</h3>
+    <p><strong>Teléfono:</strong> +503 2222-3333</p>
+    <p><strong>Dirección:</strong> Calle Cultura #45, San Salvador</p>
+    <p><strong>Correo:</strong> info@galeriadearte.com</p>
+  </section>
+</main>
+
+<footer>© G 1-2 PROYECTO</footer>
+
+<script>
+document.getElementById('btnMensaje').addEventListener('click', () => {
+  alert('¡Bienvenido a la Galería de Arte!');
+});
+document.getElementById('btnTema').addEventListener('click', () => {
+  document.documentElement.classList.toggle('light');
+  if(document.documentElement.classList.contains('light')){
+    document.documentElement.style.setProperty('--bg','#f3f6fb');
+    document.documentElement.style.setProperty('--card','#ffffff');
+    document.documentElement.style.setProperty('--accent','#2563eb');
+    document.documentElement.style.setProperty('--muted','#556078');
+  } else {
+    document.documentElement.style.setProperty('--bg','#0f1724');
+    document.documentElement.style.setProperty('--card','#0b1220');
+    document.documentElement.style.setProperty('--accent','#ff6b6b');
+    document.documentElement.style.setProperty('--muted','#94a3b8');
+  }
+});
+</script>
+</body>
+</html>
+<!-- ...coloca esto justo antes del footer o dentro del footer -->
+<div style="max-width:1100px;margin:18px auto;padding:12px 20px;display:flex;gap:12px;align-items:center;justify-content:center">
+  <input id="miNombre" type="text" placeholder="Escribe tu nombre" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.12);width:240px"/>
+  <button id="guardarNombre" style="padding:10px 14px;border-radius:10px;border:none;background:#2563eb;color:#fff;font-weight:700;cursor:pointer">Agregar nombre</button>
+  <div id="nombreMostrado" style="color:var(--muted);font-weight:600"></div>
+</div>
+
+<footer>
+  <span id="footerText">© 2025 · Proyecto Educativo de la G1-2</span>
+</footer>
+
+<script>
+// reemplaza o añade junto a tus otros scripts
+document.getElementById('ELEXANDER CHAVEZ').addEventListener('click', () => {
+  const input = document.getElementById('miNombre');
+  const nombre = input.value.trim();
+  const mostrado = document.getElementById('nombreMostrado');
+  const footerText = document.getElementById('footerText');
+  if(!nombre){
+    mostrado.textContent = 'Elexander chavez.';
+    return;
+  }
+  mostrado.textContent = `¡Hola, ${escapeHtml(nombre)}!`;
+  footerText.textContent = `© 2025 · Proyecto G1-2 — Creado por ${escapeHtml(nombre)}`;
+  input.value = '';
+});
+
+// función simple para evitar inyección de HTML
+function escapeHtml(str){
+  return str.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+
+
+
