@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Las 5 atracciones más famosas</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f7f7f7; color:#222; }
+    header { background:#1b6; color:#fff; padding:20px 16px; display:flex; align-items:center; gap:12px; }
+    header img.logo { width:60px; height:60px; object-fit:cover; border-radius:8px; }
+    main { max-width:900px; margin:24px auto; padding:0 16px; }
+    h1 { margin:0; font-size:1.6rem; }
+    .grid { display:grid; grid-template-columns: 1fr; gap:16px; }
+    .card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); display:flex; flex-direction:column; }
+    .card img.hero { width:100%; height:240px; object-fit:cover; display:block; }
+    .card .content { padding:12px 14px; }
+    .card h2 { margin:0 0 6px 0; font-size:1.1rem; }
+    .card p { margin:0; color:#555; font-size:0.95rem; }
+    footer { text-align:center; color:#666; font-size:0.9rem; padding:18px 10px; }
+    @media(min-width:720px){ .grid{ grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Imagen 1: logo o icono pequeño -->
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Globe_icon.svg/512px-Globe_icon.svg.png" alt="logo">
+    <div>
+      <h1>Las 5 atracciones más famosas del mundo</h1>
+      <div style="font-size:0.9rem; opacity:0.9">Imágenes de ejemplo incluidas (2 imágenes en la cabecera y cada tarjeta)</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article class="card">
+        <!-- Imagen 2: imagen principal -->
+        <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Taj_Mahal_in_March_2004.jpg" alt="Taj Mahal">
+        <div class="content">
+          <h2>Taj Mahal — India</h2>
+          <p>Monumento de mármol blanco construido en el siglo XVII, símbolo del amor y Patrimonio de la Humanidad.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg" alt="Torre Eiffel">
+        <div class="content">
+          <h2>Torre Eiffel — Francia</h2>
+          <p>Icono de París y de la arquitectura de hierro; construido para la Exposición Universal de 1889.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Great_Wall_2004_Summer_2.jpg" alt="Gran Muralla China">
+        <div class="content">
+          <h2>Gran Muralla China — China</h2>
+          <p>Serie de fortificaciones construidas a lo largo de siglos para proteger territorios; impresionante en escala.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Christ_on_Corcovado_mountains.jpg" alt="Cristo Redentor">
+        <div class="content">
+          <h2>Cristo Redentor — Brasil</h2>
+          <p>Estatua icónica en Río de Janeiro con vistas panorámicas de la ciudad y sus bahías.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg" alt="Coliseo">
+        <div class="content">
+          <h2>Coliseo — Italia</h2>
+          <p>Anfiteatro romano en el centro de Roma, testigo de espectáculos antiguos y gran atractivo turístico.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    Imágenes obtenidas de Wikimedia Commons como ejemplo. Descarga este archivo como index.html y abre en tu navegador.
+  </footer>
+</body>
+</html>
